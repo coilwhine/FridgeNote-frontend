@@ -1,0 +1,40 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-color);
+
+    .profile-btn {
+        position: relative;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--text-color);
+
+        .user-icon {
+            font-size: 1.8em;
+            color: var(--background-color);
+            transition: 100ms;
+        }
+
+        &:hover {
+            box-shadow: 0 0 2px var(--text-color);
+        }
+
+        &:active {
+            top: 1px;
+            box-shadow: 0 0 5px var(--text-color);
+        }
+    }
+
+    .heading {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+}
