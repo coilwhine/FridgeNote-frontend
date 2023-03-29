@@ -1,3 +1,119 @@
 .ProfileModal {
-	
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: var(--modal-padding);
+    max-width: var(--modal-max-width);
+    min-width: var(--modal-min-width);
+    width: var(--modal-width);
+    border-radius: var(--big-border-radius);
+    background-color: var(--background-color);
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 8px;
+
+        img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+
+            span {
+                font-size: 1em;
+                font-weight: bold;
+            }
+        }
+
+        .edit-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            border: none;
+            border-radius: var(--small-border-radius);
+            background-color: var(--text-color);
+
+            .edit-icon {
+                font-size: 1.4em;
+                color: var(--background-color);
+            }
+        }
+    }
+
+    .shopping-list-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .shopping-list-wraper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .shopping-list {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 50%;
+
+                .list-item {
+                    list-style: none;
+                    padding: 0px 5px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    border-radius: var(--small-border-radius);
+                    background-color: rgb(203, 172, 35);
+                }
+            }
+
+            .add-btn-wraper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                .add-list-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80px;
+                    height: 70px;
+
+                    .add-list-icon {
+                        font-size: 2em;
+                        color: var(--background-color);
+                    }
+                }
+            }
+        }
+    }
+
+    .buttons-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .logout-btn {
+            background-color: var(--logout-color);
+        }
+    }
 }

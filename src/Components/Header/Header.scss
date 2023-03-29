@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    border-radius: 0 0 var(--big-border-radius) var(--big-border-radius);
     background-color: var(--background-color);
 
     .profile-btn {

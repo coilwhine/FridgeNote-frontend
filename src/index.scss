@@ -3,9 +3,18 @@
   font-weight: 400;
 
 
-  // variables
+  // main variables
   --text-color: #eeeeef;
   --background-color: #242424;
+  --big-border-radius: 8px;
+  --small-border-radius: 5px;
+  --logout-color: rgb(225, 93, 93);
+
+  //modals
+  --modal-width: 90%;
+  --modal-max-width: 315px;
+  --modal-min-width: 255px;
+  --modal-padding: 15px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,6 +31,36 @@
 }
 
 button,
-a {
+a,
+label {
   cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+.action-btn {
+  position: relative;
+  top: 0;
+  border: none;
+  padding: 7px 12px;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: var(--background-color);
+  border-radius: var(--small-border-radius);
+  background-color: var(--text-color);
+
+  &:hover {
+    box-shadow: 0 0 2px var(--text-color);
+  }
+
+  &:active {
+    top: 1px;
+    box-shadow: 0 0 5px var(--text-color);
+  }
+
 }
