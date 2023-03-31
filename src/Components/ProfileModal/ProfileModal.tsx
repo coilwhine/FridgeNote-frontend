@@ -20,6 +20,10 @@ function ProfileModal(): JSX.Element {
         console.log('editProfile...');
     }
 
+    function listItemClick(num: any) {
+        console.log(`${num} - listItem...`);
+    }
+
     return (
         <div className="ProfileModal">
             <header>
@@ -38,9 +42,8 @@ function ProfileModal(): JSX.Element {
                 <h3>Shopping lists</h3>
                 <div className="shopping-list-wraper">
                     <ul className="shopping-list">
-                        <li className="list-item">testing very long list</li>
-                        <li className="list-item">short list</li>
-                        <li className="list-item">another long list</li>
+                        <li className="list-item" onClick={() => listItemClick(1)}>testing very long list</li>
+                        <li className="list-item" onClick={() => listItemClick(2)}>test short list</li>
                     </ul>
                     <div className="add-btn-wraper">
                         <button
