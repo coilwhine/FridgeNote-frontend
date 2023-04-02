@@ -3,8 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-radius: 0 0 var(--big-border-radius) var(--big-border-radius);
-    background-color: var(--background-color);
+    color: var(--main-text-color);
+    background-color: transparent;
 
     .profile-btn {
         position: relative;
@@ -16,26 +16,38 @@
         height: 35px;
         border-radius: 50%;
         border: none;
-        background-color: var(--text-color);
+        background-color: var(--main-background-color);
 
         .user-icon {
-            font-size: 1.8em;
-            color: var(--background-color);
+            font-size: 1.3em;
+            color: var(--main-text-color);
             transition: 100ms;
         }
 
         &:hover {
-            box-shadow: 0 0 2px var(--text-color);
+            box-shadow: var(--secondary-small-shadow);
         }
 
         &:active {
             top: 1px;
-            box-shadow: 0 0 5px var(--text-color);
+            box-shadow: var(--secondary-big-shadow);
         }
     }
 
-    .heading {
-        font-size: 1.2em;
-        font-weight: bold;
+    .logo {
+        font-size: 1.3em;
+        background-color: transparent;
+        color: var(--main-text-color);
+        font-family: var(--decorative-font);
+        box-shadow: none;
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        &:active {
+            box-shadow: none;
+            text-shadow: var(--main-small-shadow);
+        }
     }
 }

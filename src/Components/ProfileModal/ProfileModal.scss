@@ -1,18 +1,19 @@
 .ProfileModal {
     box-sizing: border-box;
     position: absolute;
-    bottom: 5%;
     left: 50%;
+    bottom: -30%;
     transform: translate(-50%);
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 15px;
+    color: var(--secondary-text-color);
     padding: var(--modal-padding);
     max-width: var(--modal-max-width);
     min-width: var(--modal-min-width);
     width: var(--modal-width);
     border-radius: var(--big-border-radius);
-    background-color: var(--background-color);
+    background-color: var(--secondary-background-color);
 
     header {
         display: flex;
@@ -47,11 +48,11 @@
             padding: 0;
             border: none;
             border-radius: var(--small-border-radius);
-            background-color: var(--text-color);
+            background-color: var(--secondary-text-color);
 
             .edit-icon {
                 font-size: 1.4em;
-                color: var(--background-color);
+                color: var(--secondary-background-color);
             }
         }
     }
@@ -75,12 +76,12 @@
                 .list-item {
                     cursor: pointer;
                     list-style: none;
-                    padding: 0px 5px;
+                    padding: 3px 6px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     border-radius: var(--small-border-radius);
-                    background-color: rgb(88, 155, 222);
+                    background-color: rgb(57, 138, 218);
                 }
             }
 
@@ -101,7 +102,7 @@
 
                     .add-list-icon {
                         font-size: 2em;
-                        color: var(--background-color);
+                        color: var(--main-text-color);
                     }
                 }
             }
@@ -111,7 +112,12 @@
     .buttons-section {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 20px;
+
+        button {
+            width: 35%;
+        }
 
         .logout-btn {
             background-color: var(--logout-color);

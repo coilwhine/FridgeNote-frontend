@@ -1,8 +1,13 @@
 import { FaPlus } from "react-icons/fa";
 import { MdModeEdit } from "react-icons/md";
 import "./ProfileModal.scss";
+import { useSelector } from "react-redux";
+import { ChosenModal } from "../../App/modalsSlice";
+
 
 function ProfileModal(): JSX.Element {
+
+    const modal = useSelector((state: { modals: ChosenModal }) => state.modals);
 
     function goToListsClick(): void {
         console.log('Lists...');
@@ -25,15 +30,15 @@ function ProfileModal(): JSX.Element {
     }
 
     return (
-        <div className="ProfileModal">
+        <div className={modal === ChosenModal.profile ? "ProfileModal activate-modal" : "ProfileModal"} >
             <header>
-                <img src="src/assets/testImg.png" alt="Profile Image" />
+                <img src="./src/assets/images/testImg.png" alt="Profile Image" />
                 <div className="name">
                     <span>Daniel</span>
                     <span>Hen</span>
                 </div>
                 <button
-                    className="action-btn edit-btn"
+                    className="action-btn light-btn edit-btn"
                     onClick={() => aditProfileClick()}>
                     <MdModeEdit className="edit-icon" />
                 </button>
@@ -47,7 +52,7 @@ function ProfileModal(): JSX.Element {
                     </ul>
                     <div className="add-btn-wraper">
                         <button
-                            className="add-list-btn action-btn"
+                            className="add-list-btn action-btn light-btn"
                             onClick={() => addListClick()}>
                             <FaPlus className="add-list-icon" />
                         </button>
@@ -55,8 +60,8 @@ function ProfileModal(): JSX.Element {
                 </div>
             </div>
             <div className="buttons-section">
-                <button className="action-btn to-lists-btn" onClick={() => goToListsClick()}>Lists</button>
-                <button className="action-btn logout-btn" onClick={() => logOutClick()}>Logout</button>
+                <button className="action-btn light-btn to-lists-btn" onClick={() => goToListsClick()}>Lists</button>
+                <button className="action-btn light-btn logout-btn" onClick={() => logOutClick()}>Logout</button>
             </div>
         </div>
     );

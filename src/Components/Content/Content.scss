@@ -1,3 +1,7 @@
 .Content {
-	
+    padding: 20px;
+    background-color: var(--main-background-color);
+    border-radius: var(--big-border-radius) var(--big-border-radius) 0 0;
+    height: 100vh;
+    box-shadow: 0 -1px 8px #7f6d5f67;
 }

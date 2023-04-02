@@ -1,0 +1,13 @@
+@keyframes activate-modal {
+    100% {
+        bottom: 5%;
+        opacity: 100;
+    }
+}
+
+.App {
+    .activate-modal {
+        display: flex;
+        animation: activate-modal 600ms forwards;
+    }
+}
