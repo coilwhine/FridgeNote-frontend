@@ -47,8 +47,14 @@ function ProfileModal(): JSX.Element {
                 <h3>Shopping lists</h3>
                 <div className="shopping-list-wraper">
                     <ul className="shopping-list">
-                        <li className="list-item" onClick={() => listItemClick(1)}>testing very long list</li>
-                        <li className="list-item" onClick={() => listItemClick(2)}>test short list</li>
+                        <li className="list-item" onClick={() => listItemClick(1)}>
+                            <h4 className="list-name">Long list name for testing</h4>
+                            <span className="items-in-list">20 items</span>
+                        </li>
+                        <li className="list-item" onClick={() => listItemClick(2)}>
+                            <h4 className="list-name">Short list name</h4>
+                            <span className="items-in-list">8 items</span>
+                        </li>
                     </ul>
                     <div className="add-btn-wraper">
                         <button
@@ -60,8 +66,8 @@ function ProfileModal(): JSX.Element {
                 </div>
             </div>
             <div className="buttons-section">
-                <button className="action-btn light-btn to-lists-btn" onClick={() => goToListsClick()}>Lists</button>
-                <button className="action-btn light-btn logout-btn" onClick={() => logOutClick()}>Logout</button>
+                <button className="action-btn dark-btn to-lists-btn" onClick={() => goToListsClick()}>Lists</button>
+                <button className="action-btn logout-btn" onClick={() => logOutClick()}>Logout</button>
             </div>
         </div>
     );

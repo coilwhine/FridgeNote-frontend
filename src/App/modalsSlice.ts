@@ -1,8 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export enum ChosenModal {
-    profile = 'profile modal',
-    none = null
+    profile = 'profile modal'
 }
 
 export const modalsSlice = createSlice({
@@ -10,9 +9,11 @@ export const modalsSlice = createSlice({
     initialState: null,
     reducers: {
         chosenModal: (state, action: PayloadAction<ChosenModal>) => {
+            document.body.style.overflowY = 'hidden';
             return state = action.payload;
         },
         clearAllModals: (state) => {
+            document.body.style.overflowY = '';
             return state = null;
         }
     }

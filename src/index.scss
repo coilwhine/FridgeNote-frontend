@@ -28,7 +28,7 @@
 
   //modals
   --modal-width: 90%;
-  --modal-max-width: 315px;
+  --modal-max-width: 370px;
   --modal-min-width: 255px;
   --modal-padding: 15px;
 
@@ -76,12 +76,13 @@ h4 {
   max-width: 550px;
 
   input {
+    position: relative;
     box-sizing: border-box;
     width: 90%;
     height: 40px;
     padding: 10px;
     border-radius: 30px;
-    color: var(--medium-background-color);
+    color: var(--dark-background-color);
     border: solid 1px var(--light-background-color);
     font-size: 0.9em;
     background-color: var(--main-background-color);
@@ -101,6 +102,7 @@ h4 {
   padding: 7px 12px;
   font-weight: bold;
   font-size: 0.8em;
+  color: var(--main-text-color);
   border-radius: var(--medium-border-radius);
 }
 
@@ -157,6 +159,20 @@ h4 {
 
 .color-btn {
   background-color: var(--app-background-color);
+  color: var(--main-text-color);
+
+  &:hover {
+    box-shadow: var(--main-small-shadow);
+  }
+
+  &:active {
+    top: 1px;
+    box-shadow: var(--main-big-shadow);
+  }
+}
+
+.logout-btn {
+  background-color: var(--logout-color);
   color: var(--main-text-color);
 
   &:hover {

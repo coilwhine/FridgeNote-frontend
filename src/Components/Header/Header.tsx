@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import "./Header.scss";
 import { FaUser } from 'react-icons/fa';
-import { ChosenModal, chosenModal } from "../../App/modalsSlice";
+import { ChosenModal, chosenModal, clearAllModals } from "../../App/modalsSlice";
 import { useNavigate } from "react-router-dom";
 
 function Header(): JSX.Element {
@@ -12,10 +12,11 @@ function Header(): JSX.Element {
 
     function clickProfileBtn(): void {
         console.log('profile btn click');
-        if (!modal) {
+        if (modal !== ChosenModal.profile) {
+            dispatch(clearAllModals());
             dispatch(chosenModal(ChosenModal.profile));
         } else {
-            dispatch(chosenModal(ChosenModal.none));
+            dispatch(clearAllModals());
         }
 
     }

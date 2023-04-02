@@ -1,7 +1,14 @@
 @keyframes activate-modal {
     100% {
-        bottom: 5%;
+        bottom: 3%;
         opacity: 100;
+    }
+}
+
+@keyframes focus-input {
+    100% {
+        text-align: end;
+        color: aquamarine;
     }
 }
 

@@ -1,19 +1,19 @@
 .ProfileModal {
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     left: 50%;
     bottom: -30%;
     transform: translate(-50%);
     display: none;
     flex-direction: column;
     gap: 15px;
-    color: var(--secondary-text-color);
+    color: var(--main-text-color);
     padding: var(--modal-padding);
     max-width: var(--modal-max-width);
     min-width: var(--modal-min-width);
     width: var(--modal-width);
     border-radius: var(--big-border-radius);
-    background-color: var(--secondary-background-color);
+    background-color: var(--light-background-color);
 
     header {
         display: flex;
@@ -43,16 +43,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             padding: 0;
             border: none;
             border-radius: var(--small-border-radius);
-            background-color: var(--secondary-text-color);
+            background-color: var(--main-background-color);
 
             .edit-icon {
-                font-size: 1.4em;
-                color: var(--secondary-background-color);
+                font-size: 1.3em;
+                color: var(--main-text-color);
             }
         }
     }
@@ -71,17 +71,27 @@
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-                width: 50%;
+                width: 60%;
 
                 .list-item {
                     cursor: pointer;
                     list-style: none;
                     padding: 3px 6px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
                     border-radius: var(--small-border-radius);
-                    background-color: rgb(57, 138, 218);
+                    background-color: var(--main-background-color);
+
+                    .list-name {
+                        font-size: 1em;
+                        font-weight: 600;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .items-in-list {
+                        font-size: 0.8em;
+                        font-weight: 300;
+                    }
                 }
             }
 
@@ -91,14 +101,14 @@
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                height: 100%;
 
                 .add-list-btn {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 60px;
-                    height: 50px;
+                    width: 90px;
+                    height: 80px;
+                    background-color: var(--app-background-color);
 
                     .add-list-icon {
                         font-size: 2em;
@@ -117,10 +127,6 @@
 
         button {
             width: 35%;
-        }
-
-        .logout-btn {
-            background-color: var(--logout-color);
         }
     }
 }

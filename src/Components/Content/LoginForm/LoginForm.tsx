@@ -30,6 +30,7 @@ function LoginForm(): JSX.Element {
                     {...register('email')}
                     required
                 />
+
                 <input
                     type="password"
                     placeholder="password"
